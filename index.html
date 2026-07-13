@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Localizador de UBS - Conectando Você à Saúde</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cabeçalho Principal -->
+  <header class="main-header">
+    <div class="container header-flex">
+      <div class="logo">
+        <strong>Portal</strong>Saúde
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#unidades">Unidades Básicas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Seção Hero (Destaque inicial) -->
+    <section id="inicio" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1>Encontre a Unidade Básica de Saúde mais próxima</h1>
+          <p>Acesse de forma rápida e transparente as informações atualizadas sobre as UBS cadastradas no CNES.</p>
+          <a href="#unidades" class="btn btn-primary">Ver Unidades</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Listagem das UBS -->
+    <section id="unidades" class="unidades-section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Unidades de Saúde Cadastradas</h2>
+          <p>Exibindo registros oficiais do Ministério da Saúde</p>
+        </header>
+
+        <!-- Elemento de feedback visual de carregamento -->
+        <div id="loading" class="loading-spinner">Carregando unidades...</div>
+
+        <!-- O Javascript vai injetar os cartões aqui dentro -->
+        <div id="ubs-grid" class="ubs-grid"></div>
+
+        <!-- Paginação / Ação -->
+        <div class="actions-container">
+          <button id="btn-carregar-mais" class="btn btn-secondary hidden">Carregar Mais</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé Semântico -->
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2026 Portal Saúde. Dados públicos providos pelo CNES / Ministério da Saúde.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
