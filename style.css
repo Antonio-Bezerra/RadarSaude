@@ -1,0 +1,209 @@
+/* --- Reset e Configurações Globais --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Componentes: Botões --- */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #e2e8f0;
+  color: #334155;
+}
+
+.btn-secondary:hover {
+  background-color: #cbd5e1;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* --- Header --- */
+.main-header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 15px 0;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.main-nav a:hover {
+  color: #007bff;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 100%);
+  padding: 80px 0;
+  text-align: left;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  color: #1e293b;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+/* --- Seção de Listagem das UBS --- */
+.unidades-section {
+  padding: 60px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  color: #1e293b;
+}
+
+.section-header p {
+  color: #64748b;
+}
+
+.loading-spinner {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #007bff;
+  margin: 40px 0;
+}
+
+/* Grid de Cards */
+.ubs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* Cartão Individual de UBS */
+.ubs-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+  border: 1px solid #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ubs-card h3 {
+  font-size: 1.2rem;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.ubs-info {
+  font-size: 0.9rem;
+  color: #475569;
+  margin-bottom: 16px;
+}
+
+.ubs-info p {
+  margin-bottom: 6px;
+}
+
+.ubs-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  background-color: #f1f5f9;
+  color: #475569;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+
+.actions-container {
+  text-align: center;
+}
+
+/* --- Footer --- */
+.main-footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
