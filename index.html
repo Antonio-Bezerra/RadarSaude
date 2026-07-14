@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -9,8 +9,8 @@
   <body>
     <header class="main-header">
       <div class="container header-flex">
-        <div class="logo"><strong>Portal</strong>Saúde</div>
-        <nav class="main-nav">
+        <div class="logo"><strong>Radar</strong>Saúde</div>
+        <nav class="main-nav" aria-label="Navegação principal">
           <ul>
             <li><a href="#inicio">Início</a></li>
             <li><a href="#unidades">Unidades Básicas</a></li>
@@ -20,22 +20,21 @@
     </header>
 
     <main>
-      <section id="inicio" class="hero-section">
+      <section id="inicio" class="hero-section" aria-labelledby="hero-title">
         <div class="container hero-container">
           <div class="hero-content">
-            <h1>Encontre a Unidade Básica de Saúde mais próxima</h1>
+            <h1 id="hero-title">Encontre a Unidade Básica de Saúde mais próxima</h1>
             <p>
               Acesse de forma rápida e transparente as informações atualizadas
               sobre as UBS cadastradas no CNES.
             </p>
 
-            <!-- Bloco de ferramentas de localização -->
             <div class="locator-box">
               <button id="btn-gps" class="btn btn-primary">
                 Usar minha Localização Atual (GPS)
               </button>
 
-              <div class="divider">ou insira seu CEP</div>
+              <div class="divider" role="separator">ou insira seu CEP</div>
 
               <div class="cep-container">
                 <input
@@ -43,25 +42,26 @@
                   id="input-cep"
                   placeholder="Ex: 01001-000"
                   maxlength="9"
+                  aria-label="Digite o seu CEP para buscar"
                 />
                 <button id="btn-cep" class="btn btn-secondary">
                   Buscar por CEP
                 </button>
               </div>
-              <p id="location-status" class="status-text"></p>
+              <p id="location-status" class="status-text" aria-live="polite"></p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="unidades" class="unidades-section">
+      <section id="unidades" class="unidades-section" aria-labelledby="unidades-title">
         <div class="container">
           <header class="section-header">
-            <h2>Unidades de Saúde Cadastradas</h2>
+            <h2 id="unidades-title">Unidades de Saúde Cadastradas</h2>
             <p>Exibindo registros oficiais do Ministério da Saúde</p>
           </header>
 
-          <div id="loading" class="loading-spinner">Carregando unidades...</div>
+          <div id="loading" class="loading-spinner" role="status">Carregando unidades...</div>
 
           <div id="ubs-grid" class="ubs-grid"></div>
 

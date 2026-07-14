@@ -1,4 +1,3 @@
-/* --- Reset e Configurações Globais --- */
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +10,9 @@ body {
   line-height: 1.6;
   background-color: #f8f9fa;
   scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .container {
@@ -32,12 +34,17 @@ body {
   border: none;
 }
 
+.btn:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+}
+
 .btn-primary {
   background-color: #007bff;
   color: #fff;
 }
 
-.btn-primary:hover {
+.btn-primary:hover:not(:disabled) {
   background-color: #0056b3;
 }
 
@@ -46,8 +53,15 @@ body {
   color: #334155;
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover:not(:disabled) {
   background-color: #cbd5e1;
+}
+
+/* Estado de desabilitado para evitar cliques duplos durante o fetch */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .hidden {
@@ -105,6 +119,7 @@ body {
 }
 
 .hero-content {
+  width: 100%;
   max-width: 600px;
 }
 
@@ -141,7 +156,6 @@ body {
   margin: 15px 0;
   color: #64748b;
   font-size: 0.9rem;
-  position: relative;
 }
 
 .cep-container {
@@ -156,10 +170,12 @@ body {
   border-radius: 6px;
   font-size: 1rem;
   outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .cep-container input:focus {
   border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
 }
 
 .status-text {
@@ -213,6 +229,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ubs-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
 }
 
 .ubs-card h3 {
@@ -254,4 +276,32 @@ body {
   text-align: center;
   font-size: 0.9rem;
   margin-top: auto;
+}
+
+/* --- Media Queries (Responsividade) --- */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .header-flex {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .cep-container {
+    flex-direction: column;
+  }
+
+  .cep-container button {
+    width: 100%;
+  }
 }
