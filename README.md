@@ -48,36 +48,6 @@ graph LR
 
 ---
 
-## 🚀 Como Executar o Projeto Localmente
-
-### Pré-requisitos
-Para rodar a interface web em sua máquina local, você precisará apenas de um navegador moderno e um servidor local simples (como a extensão *Live Server* do VS Code ou o módulo `http.server` do Python).
-
-### Passos para Execução:
-
-1. **Clonar o repositório:**
-   ```bash
-   git clone https://github.com/seu-usuario/radar-saude.git
-   cd radar-saude
-   ```
-
-2. **Configurar o Endpoint da API:**
-   Abra o arquivo `script.js` e altere a constante `API_BASE_URL` para apontar para o seu endpoint ativo do API Gateway:
-   ```javascript
-   const API_BASE_URL = 'https://seu-api-id.execute-api.us-east-1.amazonaws.com/default';
-   ```
-
-3. **Iniciar a aplicação:**
-   * Se estiver usando o VS Code, clique com o botão direito no `index.html` e selecione **Open with Live Server**.
-   * Ou utilize o terminal:
-     ```bash
-     # Python 3
-     python -m http.server 8000
-     ```
-   * Abra seu navegador e acesse: `http://localhost:8000`
-
----
-
 ## 📋 Estrutura de Arquivos do Front-End
 
 ```text
